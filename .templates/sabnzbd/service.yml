@@ -1,0 +1,13 @@
+  sabnzbd:
+    image: linuxserver/sabnzbd
+    container_name: sabnzbd
+    env_file:
+      - ./services/sabnzbd/sabnzbd.env
+    volumes:
+      - ./volumes/sabnzbd/config:/config
+      - ./volumes/sabnzbd/downloads:/downloads
+      #- /volumes/sabnzbd/incomplete downloads:/incomplete-downloads #optional
+    ports:
+      - 8080:8080
+      - 9090:9090
+    restart: unless-stopped

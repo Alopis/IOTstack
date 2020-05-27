@@ -1,0 +1,13 @@
+  resilio-sync:
+    image: linuxserver/resilio-sync
+    container_name: resilio-sync
+    env_file:
+      - ./services/resilio-sync/resilio-sync.env  
+    volumes:
+      - ./volumes/resilio-sync/config:/config
+      - ./volumes/resilio-sync/downloads:/downloads
+      - /media/moviesync:/sync/movies
+    ports:
+      - 8888:8888
+      - 55555:55555
+    restart: unless-stopped

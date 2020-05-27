@@ -1,0 +1,11 @@
+  heimdall:
+    image: linuxserver/heimdall
+    container_name: heimdall
+    env_file:
+      - ./services/heimdall/heimdall.env
+    volumes:
+      - ./volumes/heimdall/config:/config
+    ports:
+      - 80:80
+      - 443:443
+    restart: unless-stopped

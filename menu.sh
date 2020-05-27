@@ -7,6 +7,11 @@ pushd ~/IOTstack
 #structure : [CONTAINER]=MENU Display Text
 #One entry per line to simplify PRs
 declare -A cont_array=(
+	[heimdall]="Heimdall"
+	[sabnzbd]="SABnzbd"
+	[radarr]="Radarr"
+	[sonarr]="Sonarr"
+	[resilio-sync="Resilio Sync"
 	[portainer]="Portainer"
 	[nodered]="Node-RED"
 	[influxdb]="InfluxDB"
@@ -40,6 +45,11 @@ declare -A cont_array=(
 # keys for CONTAINER
 # One per line to simply PR
 declare -a armhf_keys=(
+	"heimdall"
+	"sabnzbd"
+	"radarr"
+	"sonarr"
+	"resilio-sync"
 	"portainer" 
 	"nodered" 
 	"influxdb" 

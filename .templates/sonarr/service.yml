@@ -1,0 +1,12 @@
+  sonarr:
+    image: linuxserver/sonarr
+    container_name: sonarr
+    env_file:
+      - ./services/sonarr/sonarr.env
+    volumes:
+      - ./volumes/sonarr/config:/config
+      - /mnt/tv:/tv
+      - ./volumes/sabnzbd/downloads:/downloads
+    ports:
+      - 8989:8989
+    restart: unless-stopped
